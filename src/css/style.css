@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;   
+}
+.text{
+    width: 6ch;
+    font-family: monospace;
+    font-size: 56px;
+    line-height: 50px;
+    overflow: hidden;
+    border-right: 7px solid black;
+    white-space: nowrap;
+    animation: write 3s reverse steps(6), blink .5s infinite;
+}
+
+@keyframes write {
+    to{
+        width: 0ch;
+    }
+}
+@keyframes blink {
+    to{
+        border-right: 7px solid black;
+    }
+    from{
+        border-right: 7px solid transparent;
+    }
+}
