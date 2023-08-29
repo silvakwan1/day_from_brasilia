@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    height: 100vh;   
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-content{
+    height: 100px;
+}
+.text{
+    font-family: monospace;
+    font-size: 56px;
+    line-height: 50px;
+    overflow: hidden;
+    border-right: 7px solid black;
+    white-space: nowrap;
+    animation: write 3s reverse steps(6), blink .5s infinite;
+}
+.date-content{
+    position: absolute;
+    text-underline-position: 0;
+    top: 2px;
+    right: 0;
+    border: rgba(0, 0, 0, 0.397) 2px solid;
+    border-radius: 500px;
+}
+.date{
+    padding:5px 14px;
+    font-size: 26px;
+    color: rgb(3, 3, 3);
+    font-family: monospace;
+}
+
+@keyframes write {
+    to{
+        width: 0ch;
+    }
+    from{
+        width: 6ch;
+
+    }
+}
+@keyframes blink {
+    to{
+        border-right: 7px solid black;
+    }
+    from{
+        border-right: 7px solid transparent;
+    }
+}
